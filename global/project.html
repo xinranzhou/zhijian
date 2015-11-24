@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="applicable-device" content="pc,mobile">
+    <meta content="email=no" name="format-detection" />
+    <meta name="format-detection" content="telephone=no" /><!--关闭iphone给数字添加链接的功能--> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>无标题文档</title>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link href="css/common_media.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <!--字体图标-->
+    <link href="css/css/font-awesome.min.css" rel="stylesheet"  />
+    <!--[if IE]>
+    <link href="css/css/font-awesome-ie7.min.css" rel="stylesheet"  />
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+      <!--登录等信息-->
+    	<div class="top-wrap">
+        	<div class="top-content">
+            	<div class="regards">
+                	<h4>您好，欢迎来到自由筑屋-旅居平台！</h4>
+                </div>
+                <div class="info-login">
+                 <ul class="user-info">
+                   <li><i class="fa fa-phone fa-lg"></i> 400-816-5151 ( 24h )</li>
+                   <li class="login"><a href="#" title="注册">注册</a><a href="#" title="登录">登录</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <!--导航-->
+        <div class="nav">
+        	<div class="logo"><a href="#"></a></div>
+            <ul class="choice_main_vertical">
+                <li class="current-nav"><a href="/" title="首页">首页</a></li>
+                <li><a href="#">热销项目</a></li>
+                <li><a href="#">全球换住</a></li>
+                <li><a href="#" >特惠活动</a></li>
+                <li><a href="#" >关于我们</a></li>
+                <li class="login"><a href="#" class="">注册</a><span></span><a href="#" class="">登录</a></li>
+           </ul>
+           <div class="main_vertical_bg"></div>
+        </div>
+        <!-- 手机端菜单 -->
+    <div id="menu-toggle">
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="cross">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--<div class="navbar-header" hidden>
+        <div class="navtoggle main_menu">
+            <div class="icon"></div>
+        </div>
+    </div>-->
+    </div>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script>
+    $(function(){
+        var $main_vertical_bg = $('.main_vertical_bg');
+        var $choice_main_vertical = $('.choice_main_vertical');
+//        var $navbar_header =  $('.navbar-header');
+        var $navbar_header =  $('#menu-toggle');
+            $navbar_header.on('click', function() {
+                var $this = $(this);
+                    $this.toggleClass("open");
+                if($this.hasClass("active")) {
+                    $main_vertical_bg.stop().fadeOut(300);
+                    $choice_main_vertical.stop().animate({right:'-230px'},300);
+                    $this.removeClass("active");
+                    return false;
+                } else {
+                    $main_vertical_bg.stop().fadeOut(300);
+                    $choice_main_vertical.stop().animate({right:'-230px'},300);
+                    $(".card_menu").removeClass("active");
+                    $main_vertical_bg.stop().show(300);
+                    $choice_main_vertical.stop().animate({right:''},300);
+                    $this.addClass("active");
+                    return false;
+                }
+            });
+    })
+    </script>
+<div class="white-bg1" style="padding-bottom:40px;">
+    <div class="details-contents clearfix ">
+		<div class="particulars-left">
+        	<div class="cover-main">
+            <div class="icon_radius">众筹期</div>
+            <div class="cover clearfix">
+                <div class="cover-img">
+                    <ul class="bxslider">
+                     <li><img src="images/1111232ffbf954b489489f04.jpg" /></li>
+                    </ul>
+                 </div>
+                
+            </div>
+        </div>
+        <div class="pjt_list pc_pjt_list iph_pjt_list">
+            	<div class="pjt_list_tit">[山东 烟台]五彩都会</div>
+                <ul>
+                    <li><span></span><p>一线海景公寓，尽享海滨度假，美好生活</p></li>
+                    <li><span></span><p>1/10房屋产权</p></li>
+                    <li><span></span><p>每年12000积分，可选择入住项目/全球换住/体现</p></li>
+                </ul>
+                 <!--<div class="introduce"><div class="progress" data-percent="90.77%"><i class="load"></i></div></div>-->
+                 <div class="list1_list1xmy" style="margin-top:15px;">12000元<span>/份</span></div>
+                 <div class="glob_liji"><a href="#">立即预约</a><a href="#">立即购买</a></div>
+                 <!--<div class="index_list1xmy"><span>剩余时间：</span>16天12时</div>-->
+            </div>
+            <div class="specific clearfix ">
+            	 <ul class="particulars-list-nav clearfix js-nav">
+                	<li class="active"><span>项目概况</span></li>
+                    <li><span>讨论</span></li>
+                </ul>
+                <div class="js-tabs">
+            		<div class="project-main js-list">
+                    	<div class="list1_zmgk">
+                       	  <div class="list1_zmgk_tit">基本信息</div>
+                          <table cellpadding="0" cellspacing="0" class="list1_zmgktb">
+                            	<tr>
+                                	<td width="156px" class="list1_tb1">项目地址</td>
+                                    <td width="533px" class="list1_tb2">北京市朝阳区</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">开发商</td>
+                                    <td class="list1_tb2">宁夏新兴</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">建筑类型</td>
+                                    <td class="list1_tb2">高层</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">产权年限</td>
+                                    <td class="list1_tb2">70年</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">容积率</td>
+                                    <td class="list1_tb2">3.0</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">绿化率</td>
+                                    <td class="list1_tb2">35%</td>
+                                </tr>
+                                <tr>
+                                	<td class="list1_tb1">户型面积</td>
+                                    <td class="list1_tb2">106㎡</td>
+                                </tr>
+                            </table>
+                            <div class="list1_zmgk_tit">周边配套</div>
+                          <p>项目地块临近万亩森林公园及滨河公园，平谷区青山耸翠，水系独立，空气清新，森林覆盖率为67.5％，居全市首位，达到世界发达国家水平。优质的生态环境为本项目打造成马坊镇生态居住小镇提供了良好基础。项目地块临近万亩森林公园及滨河公园，平谷区青山耸翠，水系独立，空气清新，森林覆盖率为67.5％，居全市首位，达到世界发达国家水平。优质的生态环境为本项目打造成马坊镇生态居住小镇提供了良好基础。</p>
+                            <div class="list1_zmgk_img"><center><img src="images/quwei.jpg" /></center></div>
+                            <div class="list1_zmgk_tit">项目区位</div>
+                          <p>项目地块临近万亩森林公园及滨河公园，平谷区青山耸翠，水系独立，空气清新，森林覆盖率为67.5％，居全市首位，达到世界发达国家水平。优质的生态环境为本项目打造成马坊镇生态居住小镇提供了良好基础。项目地块临近万亩森林公园及滨河公园，平谷区青山耸翠，水系独立，空气清新，森林覆盖率为67.5％，居全市首位，达到世界发达国家水平。优质的生态环境为本项目打造成马坊镇生态居住小镇提供了良好基础。</p>
+                            <div class="list1_zmgk_img"><center><img src="images/zbpt.jpg"/></center></div>
+                        </div>
+                        <div class="list1_zmgk">
+                       	  <div class="list1_zmgk_tit">评论</div>
+                          <div class="list1_pl_list">
+                          		<dl>
+                                	<dt><img src="images/toux.jpg"  /></dt>
+                                    <dd>三楼</dd>
+                                </dl>
+                                <div class="list1_pl_list1">
+                                	<div class="pingl_name">小百合<span>一小时前</span></div>
+                                    <div class="pingl_list">我是来抢沙发的！！！！！！！！！！！！！！！</div>
+                                </div>
+                          </div>                     
+                          <div class="list1_pl_listfb">
+                          		<dl>
+                                	<dt><img src="images/toux_hui.png" width="60" height="60" />    </dt>
+                                    <dd><textarea></textarea></dd>
+                                    <span>发表评论请<a href="#">登录</a></span>
+                                </dl>
+                            	<div class="pingl_sub c"><A href="#">提 交</A></div>
+                                <div class="iphoto_lt"><A href="#">加入讨论</A></div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="project-main js-list" style="display:none;">
+                    
+                    </div>
+           	    </div>
+            </div>
+        	
+        </div>
+        <div class="particulars-right">
+        	<div class="pjt_list">
+            	<div class="pjt_list_tit">[山东 烟台]五彩都会</div>
+                <ul>
+                    <li><span></span><p>一线海景公寓，尽享海滨度假，美好生活</p></li>
+                    <li><span></span><p>1/10房屋产权</p></li>
+                    <li><span></span><p>每年12000积分，可选择入住项目/全球换住/体现</p></li>
+                </ul>
+                 <!--<div class="introduce"><div class="progress" data-percent="90.77%"><i class="load"></i></div></div>-->
+                 <div class="list1_list1xmy" style="margin-top:15px;">12000元<span>/份</span></div>
+                 <div class="glob_liji"><a href="#">立即预约</a><a href="#">立即购买</a></div>
+                 <!--<div class="index_list1xmy"><span>剩余时间：</span>16天12时</div>-->
+            </div>
+            <div class="pjt_list_1"><span>项目方</span>|<span>五彩都会城市公寓</span></div>
+			<!--<div class="pjt_list1">
+            	<div class="pjt_list1_tit">认筹<span>￥100,000</span>一份</div>
+                <ul>
+                	<li><span></span><p>每年12000积分，可选择入住项目/全球换住/体现</p></li>
+                </ul>
+                <div class="pjt_list1_per"><span>限额10人</span>|<span>剩余5人</span></div>
+                
+            </div>
+            <div class="pjt_list1_1"><a href="#">我要认筹</a></div>
+            <div class="pjt_list1">
+            	<div class="pjt_list1_tit">认筹<span>￥100,000</span>一份</div>
+                <ul>
+                	<li><span></span><p>每年12000积分，可选择入住项目/全球换住/体现</p></li>
+                </ul>
+                <div class="pjt_list1_per"><span>限额10人</span>|<span>剩余5人</span></div>
+                
+            </div>
+            <div class="pjt_list1_1"><a href="#">我要认筹</a></div>
+            <div class="pjt_list1">
+            	<div class="pjt_list1_tit">认筹<span>￥100,000</span>一份</div>
+                <ul>
+                	<li><span></span><p>每年12000积分，可选择入住项目/全球换住/体现</p></li>
+                </ul>
+                <div class="pjt_list1_per"><span>限额10人</span>|<span>剩余5人</span></div>
+                
+            </div>
+            <div class="pjt_list1_1"><a href="#">我要认筹</a></div>-->
+        </div>
+	</div>
+</div>
+
+    
+
+<div class="footer">
+   		<div class="foot_1">
+        	<div class="foot_1_1">
+        		<div class="foot_1_1lo"><img src="images/logo1.jpg" width="198" height="46" /></div>
+              <div class="foot_1_1nav"><a href="#">联系我们</a>|<a href="#">加入我们</a>|<a href="#">帮助中心</a>|<a href="#">业务合作</a>|<a href="#">用户协议</a></div>
+                <div class="foot_1_1gz">关注我们：<A href="#"><img src="images/weixin.png" width="27" height="29" /></A><A href="#"><img src="images/qq.png" width="28" height="29" /></A><A href="#"><img src="images/weibo.png" width="28" height="29" /></A></div>
+            </div>
+            <div class="foot_1_2">
+            	<dl>
+                	<dt>合作伙伴</dt>
+                    <dd><img src="images/hezuo.jpg" width="351" height="54" /></dd>
+                </dl>
+            </div>
+           <!-- <div class="foot_1_3">
+        		<dl>
+                	<dt><img src="images/ewm.jpg" width="100" height="100" /></dt>
+                    <dd>关注微信公众平台</dd>
+                </dl>
+            </div>-->
+        </div>
+        <div class="foot_2">版权所有 众筹筑屋</div>
+   </div>
+   <div class="iphoto_footer">
+	版权所有 众筹筑屋
+</div>
+</div>
+<script>
+$(function () {  
+        //进度条
+		//进度条
+	 $('.progress').each(function () {
+        $(this).find('i').animate({
+            width: $(this).attr('data-percent')
+        }, 4000);
+    });
+    });  
+  
+    function RetSelecteds() {  
+        var result = "";  
+        $("#filter a[class='seled']").each(function () {  
+            result += $(this).html()+"\n";  
+        });  
+        return result;  
+    }  
+	var project = $('.js-nav li');
+    project.on('click',function(){
+        var that = $(this), index = project.index(this);
+        that.addClass('active').siblings().removeClass('active');
+        $('.js-list').eq(index).show().siblings().hide();
+        map.centerAndZoom(point, 13);
+    });
+	
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 581) {
+                $(".particulars-list-nav").addClass("fixed");
+            } else {
+                $(".particulars-list-nav").removeClass("fixed");
+            }
+        });
+   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 768px){
+	
+	/*===============iphoto header.css=====================*/
+	.header{position:fixed;left:0;top:0;width:100%;height:48px;border-bottom:1px solid #e5e5e5;background:#f8f8f8}
+		.header .top-wrap{display:none}
+		.header .nav{height:48px;width:100%; }
+		.header .nav .logo{display:block;text-align:center;width:100%}
+		.header .nav .logo a{width:auto;height:48px;background:url(../images/logo1.png) no-repeat center center;background-size:100px;margin:0 auto;}
+		.header .nav .main_vertical_bg{display:none;position:fixed;width:100%;height:100%;right:0;top:49px;/*background:rgba(0,0,0,0.4)*/;}
+		.header .nav .choice_main_vertical{position:fixed;right:-230px;top:49px;width:180px;height:100%;padding:0 25px;margin:0;background:#2E394B;z-index:999}
+		.header .nav ul a{ color:#fff; width:auto;}
+		.header .nav ul li{ height:25px;}
+		.header .nav ul li:nth-of-type(6) a{color:#fff;}
+		.header .nav .choice_main_vertical li{float:none;display:block;width:100%;line-height:1;font-size:16px}
+		.header .nav .choice_main_vertical li a{display:block;padding:20px 0 0 44px;text-align:left}
+		.header .nav .choice_main_vertical li a span{display:none}
+		.header .nav .choice_main_vertical li a:active,.header .nav .choice_main_vertical li a:focus{color:#5dbfad}
+		.header .nav .choice_main_vertical li.current-nav a{border:none}
+		.header .nav .choice_main_vertical li.login{display:block;text-align:center; border-top:1px solid #e5e5e5; margin-top:50px;border-bottom:none;}
+		.header .nav .choice_main_vertical li.login a{display:inline-block;padding:0 10px;font-size:14px;}
+		.header .nav .choice_main_vertical li.login span{display:inline-block;font-size:12px;color:#fff}
+		.header .nav .choice_main_vertical li.user-avatar{display:block;border-bottom:1px solid #e5e5e5;margin:0}
+		.header .nav .choice_main_vertical li.user-avatar a{border:none;padding:15px 0 15px 50px;height:44px;line-height:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+		.header .nav .choice_main_vertical li.user-avatar a img{float:left;display:inline-block;width:44px;height:44px;margin-left:-50px;border-radius:50%}
+		
+		.header #menu-toggle{display:inline-block;position:fixed;right:0;top:0;z-index:99999999}
+		
+			.footer{ display:none;}
+	.iphoto_footer{ display:block;}
+	#backtotop{ display:none;}
+	
+	}

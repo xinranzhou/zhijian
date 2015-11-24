@@ -1,0 +1,22 @@
+html,body,ul,li,a{padding: 0px;margin: 0px;text-decoration: none;list-style-type: none;font-size: 62.5%}
+.warper{padding-left: 1%;padding-right: 1%}
+.zc-what{padding-left: 1%;padding-right:1%;border-top: 1px solid green}
+.zc-what ul li:nth-child(1){margin-left: 50%;}
+.zc-what ul li:nth-child(2){margin-top: 3%}
+.zc-what ul li:nth-child(2) img{width: 90%}
+.zc-what ul li:nth-child(3){padding: 3%}
+.zc-what ul li:nth-child(3) p{font-size: 28px;text-indent: 2em;}
+.zc-what ul li:nth-child(4) img{width: 50%}
+.two{}
+.two ul li:last-child img{width: 86%;margin-left: 5%}
+
+
+
+.three .hz li {display: inline-block;border: 1px solid red;margin-left: 0px}
+.three #hz-bg{padding-left: 9%}
+ .three #hz-bg img{width: 25%;border: 1px solid gray;margin-right: 7%;  margin-top: 4%;}
+ .four h1,h2{text-align: center}
+ .four h2{font-size: 8em}
+ .four h1{font-size: 9em;}
+.four h1 span{color: green}
+.four h1 strong{color: greenyellow}

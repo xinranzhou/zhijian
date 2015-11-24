@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="applicable-device"content="mobile">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="http://m.tuniu.com/miniTool/?v=2015101002&amp;f=site/m2015/css/common.css,site/m2015/css/font/font.css,site/m2015/css/hotel/calendar_new.css,site/m2015/css/hotel/detail.css,site/m2015/css/layout/flight_header/header.css" />
+    <link rel="stylesheet" href="css/one.css"/>
+    <title>酒店信息</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="main hide" id="main"><!-- hotel-base-info start -->
+        <a href="/hotel/review/394626/1">
+            <div class="hotel-base-info">
+                <img src="http://m.tuniucdn.com/filebroker/cdn/res/2b/67/2b67469aba8883573c1d0a04dc628581_w200_h200_c1_t0.jpg" alt="酒店图片">
+
+                <div class="base-info">
+                    <p class="name">北京万程华府国际酒店</p>
+
+                    <p class="star">舒适型</p>
+
+                    <p class="degree">
+                        <span class="degree-point"><em>4.1</em>分</span>
+                        <span class="degree-count"><i class="icon-reply"></i>4169人点评</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <div class="hotel-imgs hide">
+            <ul class="imgs-list" id="slider">
+            </ul>
+            <p class="hotel-name">北京万程华府国际酒店</p>
+        </div>
+        <!-- hotel-base-info end -->
+
+        <!-- 地址、开业、装修、设施 开始 -->
+        <ul class="address-feature">
+
+            <li class="address">
+                <div class="local">
+                    <i class="diy img-local"></i>
+                </div>
+
+                <div class="text">
+                    东城王府井东安门大街53号（王府井步行街北口往西150米）
+                </div>
+            </li>
+
+            <li class="feature" id="HotelInfoEntry">
+                <div class="booking">
+                    <i class="diy img-booking"></i>
+                </div>
+
+                <div class="text-icon-detail">
+
+                    <div class="text">
+                        2005年开业    2011年装修
+                    </div>
+
+
+
+                    <div class="icon">
+
+
+                        <i class="diy img-huiyi"></i>
+
+                        <i class="diy img-shangwu"></i>
+
+                        <i class="diy img-reshui"></i>
+
+                        <i class="diy img-chuifeng"></i>
+
+                        <i class="diy img-jieji"></i>
+
+                        <i class="diy img-canting"></i>
+
+                        <i class="diy img-wifi1"></i>
+
+                        <i class="diy img-tingche"></i>
+
+
+                    </div>
+
+
+                    <div class="text-arrow">
+                        <span class="text">详情</span>
+                        <span class="arrow-right"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- 地址、开业、装修、设施 结束   -->
+
+        <!-- 手机预订返现 开始-->
+        <div class="mobile-book-return">
+            <span class="return">返</span>
+            <span class="text">通过手机预订酒店，每笔订单点评后多返5元现金</span>
+        </div>
+        <!-- 手机预订返现 结束-->
+
+        <!-- filter-bar start -->
+        <div class="filter-bar">
+            <div class="calender">
+                <p class="days">
+                    <span class="date">今天</span>
+                    <span class="total-days total_days">入住<em>1</em>晚</span>
+                </p>
+                <p class="modified" id="ModifyInOutTime">修改</p>
+            </div>
+            <div class="action price" data-name="price">
+                <i class="icon-price2"></i>
+                <p data-status="2">返后价</p>
+            </div>
+            <div class="action fold" data-name="fold">
+                <i class="icon-dropdown2"></i>
+                <p data-status="2">全部折叠</p>
+            </div>
+        </div>
+        <div class="filter-standing hide" style="height:46px;visibilty:hidden;"></div>
+        <!-- filter-bar end -->
+
+        <!-- room-type start -->
+        <div class="type-lists" id="typeLists">
+        </div>
+
+        <div class="room-price-lists" id="roomPriceLists">
+        </div>
+
+        <div class="loading">
+            <div class="img"></div>
+            <div class="text">正在努力加载中...</div>
+        </div>
+        <div class="list-empty hide">
+            <div class="img"></div>
+            <p>抱歉，暂无房型</p>
+        </div>
+        <div class="filter-mask hide">
+        </div>
+        <ul class="choose-pannel hide" name="price">
+            <li>价格显示方式</li>
+            <li class="select" data-value="1">显示为返现前价格<i></i></li>
+            <li class="select spec active" data-value="2">显示为<em>返现后</em>价格<br><span>（帮您计算返现优惠后的价格）</span><i></i></li>
+            <li class="cancel price-cancel">取消</li>
+        </ul>
+        <ul class="choose-pannel hide" name="fold">
+            <li>房型列表查看方式</li>
+            <li class="select" data-value="3">按价格从低到高展开<i></i></li>
+            <li class="select active" data-value="4">按同类房型分组折叠<i></i></li>
+            <li class="cancel fold-cancel">取消</li>
+        </ul>
+        <!-- room-list end -->
+
+
+
+        <!-- policy start -->
+
+        <div class="hotel-policy">
+            <a href="javascript:;">
+
+                <div class="arrow"><i></i></div>
+
+                <div class="policy-base-info">
+
+                    <h2>酒店政策</h2>
+                    <p class="check-info">
+                        入住时间：14:00以后&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;离店时间：12:00以前
+                    </p>
+
+
+                    <p class="cancel-policy">
+                        取消政策：不同类型的客房附带不同的取消预订和预先付费政策 选择上述客房时，请参阅“客房政策”。
+                    </p>
+
+                </div>
+            </a>
+        </div>
+        <div class="policy-template">
+        </div>
+
+        <!-- policy end -->
+
+        <!-- 附近热卖酒店 开始 -->
+        <a id="NearbyHotHotel" href="/m2015/hotel/hotelDefault/nearbyHotHotel?hotelId=394626&amp;cityCode=200&amp;checkInDate=2015-10-12&amp;checkOutDate=2015-10-13&amp;lat=39.915813&amp;lng=116.40813" class="hide">
+            <div class="nearby-hotsale">
+                <span class="text">附近热卖酒店（<em>-</em>）家</span>
+                <span class="arrow-right"></span>
+            </div>
+        </a>
+        <!-- 附近热卖酒店 结束 --></div>
+
+    <div id="HotelInfo" class="">
+        <!-- 酒店详情开始 -->
+        <header class="header-box fixed">
+        <span class="header-back" onclick="javascript:history.go(-1);">
+            <i class="icon-title-back effect-active"></i>
+        </span>
+            <h1>酒店信息</h1>
+        </header>
+        <div class="hotel-detail-info">
+            <ul class="content">
+
+
+                <li class="facility">
+                    <p class="title">酒店设施</p>
+                    <div class="item-collection">
+
+                        <div class="item"><i class="diy img-huiyi"></i><span class="text">会议厅</span></div>
+
+                        <div class="item"><i class="diy img-shangwu"></i><span class="text">商务中心</span></div>
+
+                        <div class="item"><i class="diy img-reshui"></i><span class="text">24小时热水</span></div>
+
+                        <div class="item"><i class="diy img-chuifeng"></i><span class="text">吹风机</span></div>
+
+                        <div class="item"><i class="diy img-jieji"></i><span class="text">接机服务</span></div>
+
+                        <div class="item"><i class="diy img-canting"></i><span class="text">餐饮设施</span></div>
+
+                        <div class="item"><i class="diy img-wifi1"></i><span class="text">Wi-Fi无线上网</span></div>
+
+                        <div class="item"><i class="diy img-tingche"></i><span class="text">停车场</span></div>
+
+
+                    </div>
+                </li>
+
+
+
+                <li class="address">
+                    <p class="title">
+                        <span class="addr">酒店地址</span>
+                    </p>
+                    <p class="text">东城王府井东安门大街53号（王府井步行街北口往西150米）</p>
+                </li>
+
+
+
+                <li class="service">
+                    <p class="title">设施服务</p>
+                    <ul class="text">
+
+                        <li class="item">
+                            <div class="key">酒店电话</div>
+                            <div class="value">010-51385702、51385703、51385704</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">开业时间</div>
+                            <div class="value">2005</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">餐饮设施</div>
+                            <div class="value">酒店餐厅</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">服务项目</div>
+                            <div class="value">收费停车场</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">附加设施</div>
+                            <div class="value">免费wifi</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">会议设施</div>
+                            <div class="value">会议室</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="key">支付方式</div>
+                            <div class="value">Visacard,牡丹卡,金穗卡,长城卡,龙卡,太平洋卡,万事达卡,运通卡,大莱卡,JCBcard</div>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+                <li class="introduction">
+                    <p class="title">酒店介绍</p>
+                    <p class="text">
+                        北京万程华府国际酒店地理位置得天独厚，位于王府井商业区。从酒店出发步行2分钟即可抵达王府井步行街，&nbsp;10分钟抵达协和医院，15分钟抵达天安门广场（乘坐公交车1站），离北京站仅15分钟车程，北京西站30分钟车程，40分钟即可抵达首都国际机场，70分钟可抵达八达岭长城。
+                        酒店拥有标准间、豪华间、套房等各类客房，设施齐全。酒店门口就是具有北京特色的东华门夜市小吃街，酒店周围遍布着多处旅游景点：王府井步行街、西什库教堂、天安门广场、故宫、劳动人民文化宫、景山公园、中山公园、什刹海等，交通便利，是商务出差、自助旅游、观光购物宾客的理想居所。
+                        酒店于2005年开业，2011年重新装修。
+                    </p>
+                </li>
+
+
+
+                <li class="traffic">
+                    <p class="title">周边交通</p>
+                    <div class="text">
+                        东城王府井东安门大街53号（王府井步行街北口往西150米）
+                        <br>-距离北京火车站1.9981公里
+                        <br>-距离北京南火车站3.3937公里
+                        <br>-距离北京北火车站5.4125公里
+                        <br>-距离北京南苑机场5.7655公里
+                        <br>-距离清华园火车站7.7749公里
+                        <br>-距离北京东火车站8.8606公里
+                        <br>-距离北京西火车站8.9461公里
+                        <br>-距离清河火车站11.6233公里
+                        <br>-距离魏善庄火车站12.0774公里
+                        <br>-距离黄村火车站12.1765公里
+                    </div>
+                </li>
+
+            </ul>
+            <!-- 酒店详情结束 -->
+        </div></div>
+
+    <div id="InOutSelectWrap">
+
+    </div>
+
+
+
+    <script type="text/html" id="mainTemplate">
+        <!-- hotel-base-info start -->
+        <% if(hotelBaseInfo.totalRemarkNum) { %> <a href="/hotel/review/394626/1"> <% } else { %> </a> <% } %>
+        <div class="hotel-base-info">
+            <img src="<%= hotelImg%>" alt="酒店图片"/>
+
+            <div class="base-info">
+                <p class="name"><%= hotelBaseInfo.name%></p>
+
+                <p class="star"><%= hotelBaseInfo.hotelLevel%></p>
+
+                <p class="degree">
+                    <span class="degree-point"><% if(hotelBaseInfo.totalScore) { %><em><%= hotelBaseInfo.totalScore%></em>分<% } else { %>暂无评分<% } %></span>
+                    <% if(hotelBaseInfo.totalRemarkNum) { %><span class="degree-count"><i class="icon-reply"></i><%= hotelBaseInfo.totalRemarkNum%>人点评</span><% } %>
+                </p>
+            </div>
+        </div>
+        </a>
+        <div class="hotel-imgs hide">
+            <ul class="imgs-list" id="slider">
+            </ul>
+            <p class="hotel-name"><%= hotelBaseInfo.name%></p>
+        </div>
+        <!-- hotel-base-info end -->
+
+        <!-- 地址、开业、装修、设施 开始 -->
+        <ul class="address-feature">
+            <%if(hotelBaseInfo.address){%>
+            <li class="address">
+                <div class="local">
+                    <i class="diy img-local"></i>
+                </div>
+
+                <div class="text">
+                    <%=hotelBaseInfo.address%>
+                </div>
+            </li>
+            <%}%>
+            <li class="feature" id="HotelInfoEntry">
+                <div class="booking">
+                    <i class="diy img-booking"></i>
+                </div>
+
+                <div class="text-icon-detail">
+                    <%if(hotelBaseInfo.decorateDate || hotelBaseInfo.debutYear){%>
+                    <div class="text">
+                        <%=decorateDebutText(hotelBaseInfo.decorateDate, hotelBaseInfo.debutYear)%>
+                    </div>
+                    <%}%>
+
+                    <%if(hotelBaseInfo.hotelServices && hotelBaseInfo.hotelServices.length > 0){%>
+                    <div class="icon">
+                        <%var hotelServices = hotelBaseInfo.hotelServices.slice(0, 8)%>
+                        <% for( var i=0, len = hotelServices.length; i<len; i++ ) {%>
+                        <%=facilityGenerate( hotelServices[i].code )%>
+                        <%}%>
+
+                    </div>
+                    <%}%>
+
+                    <div class="text-arrow">
+                        <span class="text">详情</span>
+                        <span class="arrow-right"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- 地址、开业、装修、设施 结束   -->
+
+        <!-- 手机预订返现 开始-->
+        <div class="mobile-book-return">
+            <span class="return">返</span>
+            <span class="text">通过手机预订酒店，每笔订单点评后多返5元现金</span>
+        </div>
+        <!-- 手机预订返现 结束-->
+
+        <!-- filter-bar start -->
+        <div class="filter-bar">
+            <div class="calender">
+                <p class="days">
+                    <span class="date">-</span>
+                    <span class="total-days total_days">入住<em>-</em>晚</span>
+                </p>
+                <p class="modified"  id="ModifyInOutTime">修改</p>
+            </div>
+            <div class="action price" data-name="price">
+                <i class="icon-price2"></i>
+                <p data-status="2">返后价</p>
+            </div>
+            <div class="action fold" data-name="fold">
+                <i class="icon-dropdown2"></i>
+                <p data-status="2">全部折叠</p>
+            </div>
+        </div>
+        <div class="filter-standing hide" style="height:46px;visibilty:hidden;"></div>
+        <!-- filter-bar end -->
+
+        <!-- room-type start -->
+        <div class="type-lists" id="typeLists">
+        </div>
+
+        <div class="room-price-lists" id="roomPriceLists">
+        </div>
+
+        <div class="loading">
+            <div class="img"></div>
+            <div class="text">正在努力加载中...</div>
+        </div>
+        <div class="list-empty hide">
+            <div class="img"></div>
+            <p>抱歉，暂无房型</p>
+        </div>
+        <div class="filter-mask hide">
+        </div>
+        <ul class="choose-pannel hide" name="price">
+            <li>价格显示方式</li>
+            <li class="select" data-value='1'>显示为返现前价格<i></i></li>
+            <li class="select spec active" data-value='2'>显示为<em>返现后</em>价格<br><span>（帮您计算返现优惠后的价格）</span><i></i></li>
+            <li class="cancel price-cancel">取消</li>
+        </ul>
+        <ul class="choose-pannel hide" name="fold">
+            <li>房型列表查看方式</li>
+            <li class="select" data-value='3'>按价格从低到高展开<i></i></li>
+            <li class="select active" data-value='4'>按同类房型分组折叠<i></i></li>
+            <li class="cancel fold-cancel">取消</li>
+        </ul>
+        <!-- room-list end -->
+
+
+
+        <!-- policy start -->
+        <%if(hotelBaseInfo.hotelPolicy){%>
+        <div class="hotel-policy">
+            <a href="javascript:;">
+                <% if(hotelBaseInfo.hotelPolicy.policyArrivalDeparture != '' && hotelBaseInfo.hotelPolicy.policyCancel != ''){%>
+                <div class="arrow"><i></i></div>
+                <%}%>
+                <div class="policy-base-info">
+                    <%if(hotelBaseInfo.hotelPolicy.policyArrivalDeparture){%>
+                    <h2>酒店政策</h2>
+                    <p class="check-info">
+                        <%= hotelBaseInfo.hotelPolicy.policyArrivalDeparture.replace(/\s/g, '&nbsp;')%>
+                    </p>
+                    <%}%>
+                    <% if(hotelBaseInfo.hotelPolicy.policyCancel) { %>
+                    <p class="cancel-policy">
+                        取消政策：<%= hotelBaseInfo.hotelPolicy.policyCancel%>
+                    </p>
+                    <% } %>
+                </div>
+            </a>
+        </div>
+        <div class="policy-template">
+        </div>
+        <%}%>
+        <!-- policy end -->
+
+        <!-- 附近热卖酒店 开始 -->
+        <a id="NearbyHotHotel" href="/m2015/hotel/hotelDefault/nearbyHotHotel?hotelId=<%= hotelBaseInfo.productId%>&cityCode=<%= hotelBaseInfo.cityCode%>&checkInDate=<%= hotelBaseInfo.checkInDate%>&checkOutDate=<%= hotelBaseInfo.checkOutDate%>&lat=<%= hotelBaseInfo.latitude%>&lng=<%= hotelBaseInfo.longitude%>">
+            <div class="nearby-hotsale">
+                <span class="text">附近热卖酒店（<em>-</em>）家</span>
+                <span class="arrow-right"></span>
+            </div>
+        </a>
+        <!-- 附近热卖酒店 结束 -->
+
+    </script>
+    <script type="text/html" id="typeListsTemplate">
+        <% if(data && data.length > 0){%>
+        <% for(var i = 0; i < data.length; i++){ %>
+        <section class="card">
+            <a href="javascript:void(0);" class="touch">
+                <div class="fold-area" data-id="<%= data[i].roomId%>" data-type="1" data-ispre="<%= isPre %>">
+                    <div class="type-img">
+                        <% if(data[i].roomSmallPic){%>
+                        <img src="<%= data[i].roomSmallPic %>" alt="<%= data[i].name %>">
+                        <%} else{%>
+                        <img src="/site/m2015/images/hotel/default.jpg" alt="暂无图片">
+                        <% } %>
+                    </div>
+                    <div class="type-info">
+                        <p class="title"><%= data[i].name %> <span></span></p>
+                        <p class="bed"><span><%= data[i].roomSize %>m<sup>2</sup></span><span>&nbsp&nbsp<%= data[i].bedTypeDesc %></span></p>
+                        <% if(data[i].gift){ %>
+                        <span class="spec">礼</span>
+                        <% } %>
+                        <% if(data[i].promotion){ %>
+                        <span class="spec">促</span>
+                        <% } %>
+                    </div>
+                </div>
+                <%if(!data[i].canBook){%>
+                <div class="over"></div>
+                <p class="over-text">订完</p>
+                <%}%>
+                <div class="price">
+                    <p class="lowest"><% if(!data[i].canBook){ %><span style="color: #999;<%if(data[i].startingPrice <= 0){%>float:right;<%}%>"><%if(data[i].startingPrice > 0){%>￥<%= data[i].startingPrice %><%} else{ %>售罄<% } %></span>&nbsp起<%}else{%><span>￥<%= data[i].startingPrice %></span>&nbsp起<% } %></p>
+                    <% if(data[i].startingPrice > 0 && data[i].cashBack){ %>
+                    <p class="cash-back<%if(!data[i].canBook){%> grey<%}%>">可返</p>
+                    <% } %>
+                    <i class="icon-dropdown2"></i>
+                </div>
+            </a>
+            <div class="room-lists hide">
+                <div class="room-box">
+                    <% for(var j = 0; j < data[i].packages.length; j++) {%>
+                    <div class="unit" data-id="<%= data[i].packages[j].roomId%>" data-type="2" data-ispre="<%= isPre %>">
+                        <div class="info room-info">
+                            <p class="title"><%= data[i].packages[j].name %> <span></span></p>
+                            <p class="service"><%= data[i].packages[j].breakfast %>&nbsp&nbsp<%= data[i].bedTypeDesc %>&nbsp&nbsp<% if(data[i].packages[j].roomStatus == 2){ %><span class="room-count">仅剩少量</span><% } %></p>
+                            <p class="spec">
+                                <% if(data[i].packages[j].labelInfo.length > 0){ %>
+                                <% for(var k = 0; k < data[i].packages[j].labelInfo.length; k++){
+                                var type = data[i].packages[j].labelInfo[k].labelType;
+                                %>
+                                <% if(type == 2){ %>
+                                <span class="confirm gift">礼</span>
+                                <%} else if(type == 5){%>
+                                <span class="confirm gift">促</span>
+                                <% } %>
+                                <% } %>
+                                <% } %>
+                                <% if(data[i].packages[j].isInstantConfirm == 1){ %>
+                                <span class="confirm">立即确认</span>
+                                <% } %>
+                            </p>
+                        </div>
+                        <div class="info book-info">
+                            <div class="book-price" style="<% if(data[i].packages[j].datePrice.length > 1){%>margin-left:0%;<%}%>">
+                                <p class="detail-price" style="<% if(data[i].packages[j].roomStatus == 3){%>color:#999;<%}%><% if(data[i].packages[j].datePrice.length > 1){%>position:relative;left: 12%;<%}%>"><%if(data[i].packages[j].price == 0){%>售罄<%}else{%><%if(data[i].packages[j].datePrice.length > 1){%><span style="<% if(data[i].packages[j].datePrice.length > 1){%>position:relative;left: -8%;<%}%>">均</span><%}%>￥<%= data[i].packages[j].price%><%}%></p>
+                                <% if(isPre && data[i].packages[j].cashBack > 0){ %><p class="cash-back"><span class="can">可返</span><span class="money-amount">￥<%= data[i].packages[j].cashBack %></span></p><%} else if(!isPre && data[i].packages[j].cashBack > 0){%><p class="cash-back" style="color: #999;font-size: 1rem;"><%= data[i].packages[j].originalPrice %>返<%= data[i].packages[j].cashBack %></p><% } %>
+                            </div>
+                            <% if(data[i].packages[j].isPrepay == 1 || data[i].packages[j].isGuarantee == 1){%>
+                            <div class="book-btn-pre <% if(data[i].packages[j].roomStatus == 3){%> grey<% } %>" data-roomid="<%= data[i].packages[j].roomId %>" data-hotelid="<%= data[i].packages[j].hotelId %>" data-holdtime="<%= data[i].packages[j].holdTime %>">
+                                <% if(data[i].packages[j].roomStatus == 3){%><p class="grey">订完</p><% } else {%><p>预订</p><%}%>
+                                <p class="<% if(data[i].packages[j].roomStatus == 3){%> grey<% } %>">
+                                    <% if(data[i].packages[j].isPrepay == 1){%>预付<%} else if(data[i].packages[j].isGuarantee == 1){%>担保<%}%>
+                                </p>
+                            </div>
+                            <%} else{%>
+                            <div class="book-btn<% if(data[i].packages[j].roomStatus == 3){%> grey<% } %>" data-roomid="<%= data[i].packages[j].roomId %>" data-hotelid="<%= data[i].packages[j].hotelId %>" data-holdtime="<%= data[i].packages[j].holdTime %>"><% if(data[i].packages[j].roomStatus == 3){%>订完<%}else{%>预订<%}%></div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <% } %>
+        <% } %>
+    </script>
+
+    <script type="text/html" id="roomPriceListsTemplate">
+        <%if(data && data.length > 7){%>
+        <% for(var i = 0; i < 7; i++){%>
+        <section class="room-detail-info" data-id="<%= data[i].roomId%>" data-type="2" data-ispre="<%= isPre %>">
+            <div class="img">
+                <% if(data[i].roomSmallPic){%>
+                <img src="<%= data[i].roomSmallPic %>" alt="<%= data[i].name %>">
+                <%} else{%>
+                <img src="/site/m2015/images/hotel/default.jpg" alt="暂无图片">
+                <% } %>
+            </div>
+            <div class="type-info">
+                <div class="bed-detail">
+                    <p class="title"><%= data[i].name %></p>
+                    <p><%= data[i].breakfast %>&nbsp&nbsp<%= data[i].bedTypeDesc %></span></p>
+                    <% if(data[i].isInstantConfirm){%><p class="confirm">立即确认</p><%}%>
+                </div>
+                <div class="price">
+                    <p class="detail-price <% if(!data[i].canBook){ %>grey<%}%>"><%if(data[i].price > 0){%><%if(data[i].datePrice.length > 1){%><span>均</span><%}%>￥<%= data[i].price %><%} else{ %>售罄<% } %></p>
+                    <%if(data[i].cashBack > 0){%>
+                    <p class="back_cash"><%if(!isPre){%><%= data[i].originalPrice %>返<%= data[i].cashBack %><%}else{%>可返<%= data[i].cashBack %><%}%></p>
+                    <%}%>
+                    <p class="book <%if(!data[i].canBook){%> grey<%}%>" data-roomid="<%= data[i].roomId %>" data-hotelid="<%= data[i].hotelId %>" data-holdtime="<%= data[i].holdTime %>"><%if(data[i].isPrepay){%>预付<%} else if(data[i].isGuarantee){%>担保<%}%><%if(data[i].canBook){%><span>预订</span><%}else{%><span class="grey">订完</span><%}%></p>
+                    <%if(data[i].roomStatus == 2){%><p class="left-num">仅余少量</p><%}%>
+                </div>
+            </div>
+        </section>
+        <%}%>
+        <div class="more hide">
+            <% for(var i = 7; i < data.length; i++){%>
+            <section class="room-detail-info" data-id="<%= data[i].roomId%>" data-type="2" data-ispre="<%= isPre%>">
+                <div class="img">
+                    <% if(data[i].roomSmallPic){%>
+                    <img src="<%= data[i].roomSmallPic %>" alt="<%= data[i].name %>">
+                    <%} else{%>
+                    <img src="/site/m2015/images/hotel/default.jpg" alt="暂无图片">
+                    <% } %>
+                </div>
+                <div class="type-info">
+                    <div class="bed-detail">
+                        <p class="title"><%= data[i].name %></p>
+                        <p><%= data[i].breakfast %>&nbsp&nbsp<%= data[i].bedTypeDesc %></span></p>
+                        <% if(data[i].isInstantConfirm){%><p class="confirm">立即确认</p><%}%>
+                    </div>
+                    <div class="price">
+                        <p class="detail-price <% if(!data[i].canBook){ %>grey<%}%>"><%if(data[i].price > 0){%><%if(data[i].datePrice.length > 1){%><span>均</span><%}%>￥<%= data[i].price %><%} else{ %>售罄<% } %></p>
+                        <%if(data[i].cashBack > 0){%>
+                        <p class="back_cash"><%if(!isPre){%><%= data[i].originalPrice %>返<%= data[i].cashBack %><%}else{%>可返<%= data[i].cashBack %><%}%></p>
+                        <%}%>
+                        <p class="book <%if(!data[i].canBook){%> grey<%}%>" data-roomid="<%= data[i].roomId %>" data-hotelid="<%= data[i].hotelId %>" data-holdtime="<%= data[i].holdTime %>"><%if(data[i].isPrepay){%>预付<%} else if(data[i].isGuarantee){%>担保<%}%><%if(data[i].canBook){%><span>预订</span><%}else{%><span class="grey">订完</span><%}%></p>
+                        <%if(data[i].roomStatus == 2){%><p class="left-num">仅余少量</p><%}%>
+                    </div>
+                </div>
+            </section>
+            <%}%>
+        </div>
+        <div class="extend">
+            <p>查看全部房型<i class="icon-arrow-down"></i></p>
+            <p class="hide">收起<i class="icon-arrow-up"></i></p>
+        </div>
+        <%} else {%>
+        <% for(var i = 0; i < data.length; i++){%>
+        <section class="room-detail-info" data-id="<%= data[i].roomId%>" data-type="2s" data-ispre="<%= isPre %>">
+            <div class="img">
+                <% if(data[i].roomSmallPic){%>
+                <img src="<%= data[i].roomSmallPic %>" alt="<%= data[i].name %>">
+                <%} else{%>
+                <img src="/site/m2015/images/hotel/default.jpg" alt="暂无图片">
+                <% } %>
+            </div>
+            <div class="type-info">
+                <div class="bed-detail">
+                    <p class="title"><%= data[i].name %></p>
+                    <p><%= data[i].breakfast %>&nbsp&nbsp<%= data[i].bedTypeDesc %></span></p>
+                    <% if(data[i].isInstantConfirm){%><p class="confirm">立即确认</p><%}%>
+                </div>
+                <div class="price">
+                    <p class="detail-price <% if(!data[i].canBook){ %>grey<%}%>"><%if(data[i].price > 0){%><%if(data[i].datePrice.length > 1){%><span>均</span><%}%>￥<%= data[i].price %><%} else{ %>售罄<% } %></p>
+                    <%if(data[i].cashBack > 0){%>
+                    <p class="back_cash"><%if(!isPre){%><%= data[i].originalPrice %>返<%= data[i].cashBack %><%}else{%>可返<%= data[i].cashBack %><%}%></p>
+                    <%}%>
+                    <p class="book <%if(!data[i].canBook){%> grey<%}%>" data-roomid="<%= data[i].roomId %>" data-hotelid="<%= data[i].hotelId %>" data-holdtime="<%= data[i].holdTime %>"><%if(data[i].isPrepay){%>预付<%} else if(data[i].isGuarantee){%>担保<%}%><%if(data[i].canBook){%><span>预订</span><%}else{%><span class="grey">订完</span><%}%></p>
+                    <%if(data[i].roomStatus == 2){%><p class="left-num">仅余少量</p><%}%>
+                </div>
+            </div>
+        </section>
+        <%}%>
+        <% } %>
+    </script>
+
+    <div class="loading-all hide" id="loading">
+        <div class="spinner">
+            <div class="spinner-inner">
+            </div>
+            <div class="cutout"></div>
+            <div class="s-circle"></div>
+        </div>
+        <div class="loading-logo"><span class="icon-logo"></span></div>
+    </div>
+    <input type="hidden" id="hotelId" value="394626">
+    <input type="hidden" id="checkInDate" value="2015-10-12">
+    <input type="hidden" id="checkOutDate" value="2015-10-13">
+
+
+    <input type="hidden" id="hotelRoomDetail" value="/api/hotel/product/hotelRoomDetail">
+    <input type="hidden" id="hotelBaseInfo" value="/api/hotel/product/hotelBaseInfo">
+    <input type="hidden" id="nearbyHotHotel" value="/api/hotel/product/nearbyHotHotel">
+    <input type="hidden" id="hotelIntroduce" value="/iapi/appserver/view/hotelIntroduce">
+    <input type="hidden" id="hotelBookingInfo" name="hotelBookingInfo" value="http://dynamic.m.tuniu.com/api/hotel/order/hotelBookingInfo">
+    <input type="hidden" id="userLoginStatusAjax" value="http://dynamic.m.tuniu.com/promotion/interface/index/action/userLoginStatusAjax">
+    <input type="hidden" id="userLogin" value="http://dynamic.m.tuniu.com/u/login">
+
+    <!-- <input type="hidden" id="hotelRoomDetail" value="http://m.tuniu.com/api/hotel/product/hotelRoomDetail"> -->
+    <!-- <input type="hidden" id="hotelBaseInfo" value="http://m.tuniu.com/api/hotel/product/hotelBaseInfo"> -->
+    <!-- <input type="hidden" id="nearbyHotHotel" value="http://m.tuniu.com/api/hotel/product/nearbyHotHotel"> -->
+    <!-- <input type="hidden" id="hotelIntroduce" value="http://m.tuniu.com/iapi/appserver/view/hotelIntroduce"> -->
+    <!-- <input type="hidden" id="hotelBookingInfo" name="hotelBookingInfo" value="http://m.tuniu.com/api/hotel/order/hotelBookingInfo"> -->
+
+</div>
+</body>
+</html>
